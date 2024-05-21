@@ -43,7 +43,7 @@ public class GamePanel extends JPanel implements  Runnable {
         image = createImage(getWidth(),getHeight());
         graphics = image.getGraphics();
         draw(graphics);
-        graphics.drawImage(image,0,0,this);
+        g.drawImage(image,0,0,this);
     }
 
     public void draw(Graphics g){
@@ -71,16 +71,19 @@ public class GamePanel extends JPanel implements  Runnable {
                 checkCollision();
                 repaint();
                 delta--;
+                System.out.println("Test");
             }
         }
 
     }
     public class AL extends KeyAdapter{
-        public void keyPressed(KeyEvent event){
-
+        public void keyPressed(KeyEvent e){
+            paddle1.keyPressed(e);
+            paddle2.keyPressed(e);
         }
-        public void keyReleased(KeyEvent event){
-
+        public void keyReleased(KeyEvent e){
+            paddle1.keyReleased(e);
+            paddle2.keyReleased(e);
         }
     }
 }
