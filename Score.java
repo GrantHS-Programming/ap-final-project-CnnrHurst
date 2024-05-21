@@ -15,7 +15,7 @@ public class Score extends  Rectangle{
     }
     public void draw(Graphics g){
         g.setColor(Color.white);
-        g.setFont(new Font("Consolas",Font.PLAIN,60));
+        g.setFont(new Font("Consolas",Font.PLAIN,50));
 
         g.drawLine(GAME_WIDTH/2, 0, GAME_WIDTH/2, GAME_HEIGHT);
         g.drawString(String.valueOf(player1/10)+String.valueOf(player1%10), (GAME_WIDTH/2)-85, 50);
